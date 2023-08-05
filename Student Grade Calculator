@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class StudGradeCal {
+    public static void main(String[] args) {
+
+        float sum = 0;
+        float Marks = 0;
+        String Grade=null;
+        System.out.println("Enter No.Of Subjects");
+        Scanner ss = new Scanner(System.in);
+        int Subjects = ss.nextInt();
+        System.out.println("No of Subjects are " + Subjects);
+        System.out.println("Enter Marks Obtained in " + Subjects + " Subjects");
+        for (int j = 0; j < Subjects; j++) {
+            Marks = ss.nextFloat();
+            sum = sum + Marks;
+        }
+        System.out.println("Total Obtained Marks in " + Subjects + " Subjects are : " + sum + " out of "+100*Subjects);
+        float Avg = sum / Subjects;
+        System.out.println("Average % of Obtained Marks is : " + Avg + "%");
+
+            if (Avg >= 94)
+                Grade="A";
+            else if (Avg >= 90 && Avg < 94)
+                Grade="A-";
+            else if (Avg >= 87 && Avg < 90)
+               Grade="B+";
+            else if (Avg >= 83 && Avg < 87)
+                Grade="B";
+            else if (Avg >= 80 && Avg < 83)
+                Grade="B-";
+            else if (Avg >= 77 && Avg < 80)
+                Grade="C+";
+            else if (Avg >= 73 && Avg < 77)
+                Grade="C";
+            else if (Avg >= 70 && Avg < 73)
+                Grade="C-";
+            else if (Avg >= 67 && Avg < 70)
+                Grade="D+";
+            else if (Avg >= 63 && Avg < 67)
+                Grade="D";
+            else if (Avg >= 60 && Avg < 63)
+                Grade="D-";
+            else
+                System.out.println("F");
+        System.out.print("Overall Grade is : "+Grade);
+
+        System.out.println("\n");
+
+        System.out.println("\nObt.Marks "+"     \tAvg%"+"         \tGrade"+"\n"+sum+"          \t"+Avg+"             \t"+Grade);
+    }
+    }
+
